@@ -1,0 +1,47 @@
+{
+    "results":{
+        "size":1,
+        "expand":"result",
+        "start-index":0,
+        "max-result":25,
+        "result":[
+            {
+                "link":{
+                    "href":"http://bamboo.example.com/rest/api/latest/result/EX-EXPL-5",
+                    "rel":"self"
+                },
+                "plan":{
+                    "shortName":"Example Plan",
+                    "shortKey":"EXPL",
+                    "type":"chain",
+                    "enabled":true,
+                    "link":{
+                        "href":"http://bamboo.example.com/rest/api/latest/plan/EX-EXPL",
+                        "rel":"self"
+                    },
+                    "key":"EX-EXPL",
+                    "name":"Consumer Ops - Blow Away WebYP Bundle Gems",
+                    "planKey":{
+                        "key":"EX-EXPL"
+                    }
+                },
+                "buildResultKey":"EX-EXPL-5",
+                "lifeCycleState":"Finished",
+                "id":11764521,
+                "key":"EX-EXPL-5",
+                "planResultKey":{
+                    "key":"EX-EXPL-5",
+                    "entityKey":{
+                        "key":"EX-EXPL"
+                    },
+                    "resultNumber":5
+                },
+                "state":"Successful",
+                "buildState":"Successful",
+                "number":5,
+                "buildNumber":5
+            }
+        ]
+    }
+}
+

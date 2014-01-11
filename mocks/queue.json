@@ -1,0 +1,12 @@
+{
+    "expand":"queuedBuilds",
+    "link":{
+        "href":"http://bamboo.example.com/rest/api/latest/queue",
+        "rel":"self"
+    },
+    "queuedBuilds":{
+        "size":0,
+        "start-index":0,
+        "max-result":0
+    }
+}

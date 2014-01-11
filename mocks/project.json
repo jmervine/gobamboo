@@ -1,0 +1,23 @@
+{
+    "expand":"projects",
+    "link":{
+        "href":"http://bamboo.example.com/rest/api/latest/project",
+        "rel":"self"
+    },
+    "projects":{
+        "size":1,
+        "expand":"plan",
+        "start-index":0,
+        "max-result":25,
+        "project":[
+            {
+                "key": "EXPROJ",
+                "name": "Example Project",
+                "link": {
+                    "href": "http://bamboo.example.com/rest/api/latest/project/EXPROJ",
+                    "rel": "self"
+                }
+            }
+        ]
+    }
+}

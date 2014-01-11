@@ -1,0 +1,30 @@
+{
+    "expand":"plans",
+    "link":{
+        "href":"http://bamboo.example.com/rest/api/latest/plan",
+        "rel":"self"
+    },
+    "plans":{
+        "size":1,
+        "expand":"plan",
+        "start-index":0,
+        "max-result":25,
+        "plan":[
+            {
+                "shortName":"Example Plan",
+                "shortKey":"EXPL",
+                "type":"chain",
+                "enabled":true,
+                "link":{
+                    "href":"http://bamboo.example.com/rest/api/latest/plan/EX-EXPL",
+                    "rel":"self"
+                },
+                "key":"EX-EXPL",
+                "name":"Example Plan",
+                "planKey":{
+                    "key":"EX-EXPL"
+                }
+            }
+        ]
+    }
+}
