@@ -59,4 +59,4 @@ func main() {
 }
 ```
 
-See [example.go](example.go) for a more useful full example.
+See [example.go](example/example.go) for a more useful full example.

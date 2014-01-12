@@ -19,22 +19,14 @@ func PrefabBamboo() (b *Bamboo) {
 }
 
 // Mocks
-func MockPath(key string) string {
-  return "./mocks/"+key+".json"
-}
-
-func MockHTTP(content string) *httptest.Server {
-  return httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
-    fmt.Fprintln(res, content)
-  }))
-}
-
 func MockRequest(api string) (*httptest.Server) {
-  body, err := ioutil.ReadFile(MockPath(api))
+  body, err := ioutil.ReadFile("./mocks/"+api+".json")
   if err != nil {
     panic(err)
   }
-  return MockHTTP(string(body))
+  return httptest.NewServer(http.HandlerFunc(func(res http.ResponseWriter, req *http.Request) {
+    fmt.Fprintln(res, string(body))
+  }))
 }
 
 // Tests

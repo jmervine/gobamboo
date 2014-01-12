@@ -35,26 +35,21 @@ func main() {
   b.Username = username
   b.Password = password
 
-  switch(query) {
-  case "info":
-    info, _ := b.Info(opts)
-    fmt.Printf("----------\n%#v\n----------\n", info)
-
-  case "plan":
-    plan, _ := b.Plan(opts)
-    fmt.Printf("----------\n%#v\n----------\n", plan)
-
-  case "project":
-    project, _ := b.Project(opts)
-    fmt.Printf("----------\n%#v\n----------\n", project)
-
-  case "queue":
-    queue, _ := b.Queue(opts)
-    fmt.Printf("----------\n%#v\n----------\n", queue)
-
-  case "result":
-    result, _ := b.Result(opts)
-    fmt.Printf("----------\n%#v\n----------\n", result)
-
+  fn := func (q string, o map[string]string) (interface{}, error) {
+    switch(q) {
+    case "plan":
+      return b.Plan(o)
+    case "project":
+      return b.Project(o)
+    case "queue":
+      return b.Queue(o)
+    case "result":
+      return b.Result(o)
+    default:
+      return b.Info(o)
+    }
   }
+
+  result, _ := fn(query)
+  fmt.Printf("----------\n%#v\n----------\n", result)
 }
